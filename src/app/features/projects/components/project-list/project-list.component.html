@@ -1,0 +1,41 @@
+<!-- Filtros por categoría -->
+<div class="filter-wrapper">
+  <div class="filter-bar" role="group" aria-label="Filtrar proyectos por categoría">
+    @for (cat of categories; track cat.key) {
+      <button
+        class="filter-pill"
+        [class.filter-pill--active]="activeCategory === cat.key"
+        (click)="selectCategory(cat.key)"
+        [attr.aria-pressed]="activeCategory === cat.key"
+      >
+        {{ cat.label }}
+      </button>
+    }
+  </div>
+
+  <!-- Aclaración contextual al filtrar por Backend -->
+  @if (activeCategory === 'backend') {
+    <div class="filter-notice glass anim-fade-in">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="filter-notice__icon">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+      </svg>
+      <span>
+        Mostrando proyectos con desarrollo y arquitectura <strong>Backend</strong> integrada (.NET Core, C#, Python, SQL Server, microservicios y APIs transaccionales).
+      </span>
+    </div>
+  }
+</div>
+
+<!-- Grid de proyectos -->
+@if (projects.length > 0) {
+  <div class="projects-grid">
+    @for (project of projects; track project.id) {
+      <app-project-card [project]="project" (openDetail)="selectProject.emit($event)" />
+    }
+  </div>
+} @else {
+  <div class="empty-state">
+    <p class="empty-state__icon">🔍</p>
+    <p class="empty-state__text">No hay proyectos en esta categoría todavía.</p>
+  </div>
+}

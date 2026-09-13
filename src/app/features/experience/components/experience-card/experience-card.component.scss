@@ -1,0 +1,249 @@
+// ── TIMELINE ITEM & EXPERIENCE CARD ─────────────────────────────
+.exp-item {
+  display: flex;
+  gap: var(--sp-6);
+  position: relative;
+  padding-bottom: var(--sp-8);
+
+  @media (max-width: 640px) {
+    gap: var(--sp-3);
+  }
+
+  &--latest {
+    .exp-card {
+      border-color: rgba(var(--color-secondary-rgb), 0.35);
+      box-shadow: 0 4px 28px rgba(0, 10, 16, 0.45), 0 0 20px rgba(var(--color-secondary-rgb), 0.12);
+    }
+  }
+
+  // Vertical line connector and dot
+  &__line-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 24px;
+    padding-top: var(--sp-4);
+  }
+
+  &__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--palette-ocean);
+    border: 2px solid var(--palette-aqua);
+    box-shadow: 0 0 10px rgba(var(--color-secondary-rgb), 0.4);
+    position: relative;
+    z-index: 2;
+
+    &--latest {
+      background: var(--palette-aqua);
+      border-color: #fff;
+      box-shadow: 0 0 14px var(--palette-aqua);
+    }
+  }
+
+  &__pulse {
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--palette-aqua);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  &__line {
+    width: 2px;
+    flex: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--color-secondary-rgb), 0.35),
+      rgba(var(--color-mist-rgb), 0.15)
+    );
+    margin-top: var(--sp-2);
+  }
+}
+
+.exp-card {
+  flex: 1;
+  border-radius: var(--radius-lg);
+  padding: var(--sp-6);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-card);
+  transition: transform var(--ease-normal), box-shadow var(--ease-normal), border-color var(--ease-normal);
+
+  &:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-border-accent);
+    box-shadow: var(--shadow-card-hover);
+  }
+
+  @media (max-width: 640px) {
+    padding: var(--sp-4);
+  }
+
+  // Header
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-4);
+    padding-bottom: var(--sp-4);
+    border-bottom: 1px solid var(--color-border);
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: var(--sp-3);
+    }
+  }
+
+  &__title-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__meta-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-2);
+    margin-bottom: 4px;
+  }
+
+  &__role {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.25;
+  }
+
+  &__company {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-top: 2px;
+  }
+
+  // Date & location box
+  &__date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+    white-space: nowrap;
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--sp-3);
+    }
+  }
+
+  &__period, &__location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__duration {
+    font-weight: 600;
+    color: var(--palette-amber);
+  }
+
+  // Body / Highlights
+  &__body {
+    margin-bottom: var(--sp-4);
+  }
+
+  &__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  &__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-3);
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+
+    strong {
+      color: var(--color-text-primary);
+    }
+  }
+
+  &__check {
+    color: var(--palette-lime);
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+
+  // Technologies & Skills footer
+  &__skills {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    flex-wrap: wrap;
+    padding-top: var(--sp-3);
+    border-top: 1px solid var(--color-border);
+  }
+
+  &__skills-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+}
+
+// Badges
+.exp-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+
+  &--primary {
+    background: rgba(var(--color-primary-rgb), 0.12);
+    border: 1px solid rgba(var(--color-primary-rgb), 0.3);
+    color: var(--color-primary);
+  }
+
+  &--secondary {
+    background: rgba(var(--color-accent-rgb), 0.12);
+    border: 1px solid rgba(var(--color-accent-rgb), 0.3);
+    color: var(--palette-amber);
+  }
+}
+
+// Skill Tag
+.exp-skill-tag {
+  padding: 2px 8px;
+  font-size: 0.72rem;
+  font-family: 'Courier New', monospace;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--color-mist-rgb), 0.08);
+  border: 1px solid rgba(var(--color-mist-rgb), 0.22);
+  color: var(--palette-mist);
+}

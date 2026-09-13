@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="100%" height="100%" fill="none" opacity="0.85">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="lineGradCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#006E90" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#41BBD9" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#ADCAD6" stop-opacity="0.1" />
+    </linearGradient>
+
+    <linearGradient id="lineGradOcean" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#004f68" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#41BBD9" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#99C24D" stop-opacity="0.25" />
+    </linearGradient>
+
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#41BBD9" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#006E90" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#004f68" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F18F01" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#F18F01" stop-opacity="0" />
+    </radialGradient>
+
+    <pattern id="dotMatrix" x="0" y="0" width="48" height="48" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#41BBD9" fill-opacity="0.12" />
+    </pattern>
+  </defs>
+
+  <!-- Background Dot Matrix Grid -->
+  <rect width="1440" height="900" fill="url(#dotMatrix)" />
+
+  <!-- Architectural Bus & Connection Circuits -->
+  <g class="mesh-circuits" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Main Horizontal Data Trunk -->
+    <path d="M 80 180 L 320 180 L 400 260 L 760 260 L 840 180 L 1360 180" stroke="url(#lineGradCyan)" stroke-width="1.5" stroke-dasharray="8 6" />
+
+    <!-- Secondary Microservice Loop -->
+    <path d="M 620 120 L 720 120 L 780 180 L 780 340 L 920 480 L 1380 480" stroke="url(#lineGradOcean)" stroke-width="1.5" />
+
+    <!-- Diagonal Feeder lines -->
+    <path d="M 180 420 L 340 420 L 420 340 L 580 340" stroke="url(#lineGradCyan)" stroke-width="1.2" />
+    <path d="M 960 180 L 1040 260 L 1260 260 L 1320 320" stroke="url(#lineGradCyan)" stroke-width="1.2" stroke-dasharray="4 4" />
+
+    <path d="M 400 680 L 560 680 L 640 600 L 980 600 L 1060 680 L 1380 680" stroke="url(#lineGradOcean)" stroke-width="1.2" />
+    <path d="M 760 260 L 760 480 L 840 560 L 1120 560" stroke="url(#lineGradCyan)" stroke-width="1.2" />
+  </g>
+
+  <!-- System Architecture Nodes (Servers, Gateways & Handlers) -->
+  <g class="mesh-nodes">
+    <!-- Node 1: API Gateway -->
+    <g transform="translate(320, 180)">
+      <circle r="18" fill="url(#nodeGlow)" />
+      <circle r="6" fill="#41BBD9" />
+      <circle r="2" fill="#ffffff" />
+      <rect x="16" y="-22" width="130" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#006E90" stroke-width="1" />
+      <text x="24" y="-8" fill="#ADCAD6" font-family="'Courier New', monospace" font-size="10" font-weight="bold">API_GW :443 [OK]</text>
+    </g>
+
+    <!-- Node 2: Auth Service -->
+    <g transform="translate(760, 260)">
+      <circle r="20" fill="url(#nodeGlow)" />
+      <circle r="7" fill="#41BBD9" />
+      <circle r="3" fill="#ffffff" />
+      <rect x="18" y="-22" width="120" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#41BBD9" stroke-width="1" />
+      <text x="26" y="-8" fill="#41BBD9" font-family="'Courier New', monospace" font-size="10" font-weight="bold">AUTH_SVC :: JWT</text>
+    </g>
+
+    <!-- Node 3: Event Broker -->
+    <g transform="translate(840, 180)">
+      <circle r="16" fill="url(#amberGlow)" />
+      <circle r="6" fill="#F18F01" />
+      <rect x="16" y="-22" width="135" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#F18F01" stroke-width="1" />
+      <text x="24" y="-8" fill="#F18F01" font-family="'Courier New', monospace" font-size="10" font-weight="bold">EVENT_BUS :: PUB/SUB</text>
+    </g>
+
+    <!-- Node 4: Microservice Cluster -->
+    <g transform="translate(1040, 260)">
+      <circle r="18" fill="url(#nodeGlow)" />
+      <circle r="6" fill="#99C24D" />
+      <rect x="16" y="-22" width="115" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#99C24D" stroke-width="1" />
+      <text x="24" y="-8" fill="#99C24D" font-family="'Courier New', monospace" font-size="10" font-weight="bold">AZURE_K8S :: NODE</text>
+    </g>
+
+    <!-- Node 5: Database Cluster -->
+    <g transform="translate(420, 340)">
+      <circle r="14" fill="url(#nodeGlow)" />
+      <circle r="5" fill="#41BBD9" />
+      <rect x="14" y="-22" width="110" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#004f68" stroke-width="1" />
+      <text x="22" y="-8" fill="#ADCAD6" font-family="'Courier New', monospace" font-size="10" font-weight="bold">SQL_TRANSAC: 99.9%</text>
+    </g>
+
+    <!-- Node 6: Cloud Cache -->
+    <g transform="translate(920, 480)">
+      <circle r="16" fill="url(#nodeGlow)" />
+      <circle r="6" fill="#41BBD9" />
+      <rect x="16" y="-22" width="125" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#006E90" stroke-width="1" />
+      <text x="24" y="-8" fill="#41BBD9" font-family="'Courier New', monospace" font-size="10" font-weight="bold">REDIS_CACHE :: LAT 2ms</text>
+    </g>
+
+    <!-- Node 7: POS / Payment Gateway Connector -->
+    <g transform="translate(640, 600)">
+      <circle r="18" fill="url(#amberGlow)" />
+      <circle r="6" fill="#F18F01" />
+      <rect x="16" y="-22" width="145" height="20" rx="4" fill="#011b24" fill-opacity="0.85" stroke="#F18F01" stroke-width="1" />
+      <text x="24" y="-8" fill="#F18F01" font-family="'Courier New', monospace" font-size="10" font-weight="bold">PAY_GATEWAY :: 300+ POS</text>
+    </g>
+  </g>
+
+  <!-- Ambient Perspective Data Grid on Bottom -->
+  <g opacity="0.25" stroke="#41BBD9" stroke-width="0.8">
+    <line x1="200" y1="880" x2="600" y2="680" />
+    <line x1="500" y1="880" x2="720" y2="680" />
+    <line x1="800" y1="880" x2="840" y2="680" />
+    <line x1="1100" y1="880" x2="960" y2="680" />
+    <line x1="1400" y1="880" x2="1080" y2="680" />
+    <line x1="200" y1="840" x2="1400" y2="840" />
+    <line x1="320" y1="780" x2="1280" y2="780" />
+    <line x1="440" y1="720" x2="1160" y2="720" />
+  </g>
+</svg>

@@ -1,0 +1,43 @@
+<div class="projects-page section">
+  <div class="container">
+
+    <!-- Page header -->
+    <header class="page-header anim-fade-up">
+      <span class="section-label">Portafolio Profesional</span>
+      <h1 class="section-title">
+        Mis <span class="gradient-text">Proyectos</span>
+      </h1>
+      <p class="section-subtitle">
+        Este portafolio describe la arquitectura y tecnología de una selección de mis proyectos backend, frontend y fullstack. Aunque no es exhaustiva, esta muestra refleja mi experiencia desarrollando APIs, middleware e integraciones complejas como programas de lealtad, pasarelas de pago y sistemas de autocobro.
+      </p>
+    </header>
+
+    <!-- Notice corporativo / NDA -->
+    <div class="nda-notice glass anim-fade-up anim-delay-1">
+      <div class="nda-notice__icon-wrap">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+      </div>
+      <p class="nda-notice__text">
+        <strong>Nota de confidencialidad y propiedad intelectual:</strong> El código fuente de las soluciones detalladas en este portafolio fue desarrollado en el marco de contratos laborales y de consultoría corporativa. En cumplimiento de políticas de seguridad y acuerdos de confidencialidad (NDA), los repositorios, pipelines e infraestructura técnica permanecen bajo custodia privada de las empresas contratantes.
+      </p>
+    </div>
+
+    <!-- Lista filtrable -->
+    <app-project-list
+      [projects]="projects"
+      [activeCategory]="activeCategory"
+      (categoryChanged)="onCategoryChanged($event)"
+      (selectProject)="openProjectDetail($event)"
+    />
+
+  </div>
+
+  <!-- Modal de Detalle y Galería de Imágenes -->
+  <app-project-detail-modal
+    [project]="selectedProject()"
+    (closed)="closeProjectDetail()"
+  />
+</div>
+

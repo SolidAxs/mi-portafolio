@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none">
+  <defs>
+    <linearGradient id="favBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022330" />
+      <stop offset="100%" stop-color="#011620" />
+    </linearGradient>
+    <linearGradient id="favCyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#41BBD9" />
+      <stop offset="100%" stop-color="#006E90" />
+    </linearGradient>
+    <linearGradient id="favCaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06445b" />
+      <stop offset="100%" stop-color="#021d28" />
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo redondeado con sutil borde cian -->
+  <rect width="64" height="64" rx="16" fill="url(#favBgGrad)" />
+  <rect width="62" height="62" x="1" y="1" rx="15" stroke="#41BBD9" stroke-width="1" stroke-opacity="0.35" />
+
+  <!-- Llave izquierda { -->
+  <path
+    d="M 14 14 C 9 14, 8 21, 8 26 C 8 30, 4.5 32, 2.5 32 C 4.5 32, 8 34, 8 38 C 8 43, 9 50, 14 50"
+    stroke="url(#favCyanGrad)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Asa del portafolio -->
+  <path
+    d="M 27 22 V 18 C 27 16.5, 28.5 15, 30 15 H 34 C 35.5 15, 37 16.5, 37 18 V 22"
+    stroke="#41BBD9"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Cuerpo del portafolio -->
+  <rect
+    x="18"
+    y="22"
+    width="28"
+    height="23"
+    rx="3.5"
+    fill="url(#favCaseGrad)"
+    stroke="#41BBD9"
+    stroke-width="2"
+  />
+
+  <!-- Solapa en V -->
+  <path
+    d="M 18 24 L 32 33 L 46 24"
+    stroke="#41BBD9"
+    stroke-width="1.8"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Broche ámbar -->
+  <rect
+    x="30"
+    y="31"
+    width="4"
+    height="4.5"
+    rx="1"
+    fill="#F18F01"
+    stroke="#ffb347"
+    stroke-width="0.8"
+  />
+
+  <!-- Llave derecha } -->
+  <path
+    d="M 50 14 C 55 14, 56 21, 56 26 C 56 30, 59.5 32, 61.5 32 C 59.5 32, 56 34, 56 38 C 56 43, 55 50, 50 50"
+    stroke="url(#favCyanGrad)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>

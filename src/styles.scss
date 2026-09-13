@@ -1,1 +1,364 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================================
+   🎨 PALETA DE COLORES CENTRALIZADA (Edita aquí tus colores)
+   ============================================================
+   Esta sección concentra TODA la paleta de colores del portafolio.
+   Cualquier cambio aquí afectará de inmediato a botones, gradientes,
+   tarjetas, modales, navbar, badges y bordes de todo el sitio.
+   ============================================================ */
+:root {
+  /* ── 1. VALORES HEX DE TU PALETA MAESTRA ───────────────────── */
+  --palette-ocean:       #006E90; /* [Azul Petróleo / Océano Primario] */
+  --palette-ocean-dark:  #004f68; /* [Azul Petróleo Profundo - Elevaciones] */
+  --palette-ocean-night: #011b24; /* [Fondo Base - Océano Noche] */
+  --palette-ocean-card:  #032633; /* [Superficie de Tarjetas / Menús] */
+  --palette-ocean-deep:  #053445; /* [Contenedores y Paneles Secundarios] */
+  --palette-aqua:        #41BBD9; /* [Secundario / Cian Eléctrico Vibrante] */
+  --palette-mist:        #ADCAD6; /* [Azul Hielo / Niebla - Texto y Bordes Suaves] */
+  --palette-amber:       #F18F01; /* [Acento Cálido - Naranja Ámbar / Destacados] */
+  --palette-lime:        #99C24D; /* [Acento Fresco - Verde Lima / Disponibilidad y Éxito] */
+
+  /* ── 2. CANALES RGB (Para transparencias dinámicas automáticas) ─ */
+  --color-primary-rgb:    65, 187, 217;  /* rgb de #41BBD9 (Cian Aqua resalta sobre el océano) */
+  --color-ocean-rgb:      0, 110, 144;   /* rgb de #006E90 */
+  --color-ocean-dark-rgb: 0, 79, 104;    /* rgb de #004f68 */
+  --color-secondary-rgb:  65, 187, 217;  /* rgb de #41BBD9 */
+  --color-mist-rgb:       173, 202, 214; /* rgb de #ADCAD6 */
+  --color-accent-rgb:     241, 143, 1;   /* rgb de #F18F01 */
+  --color-success-rgb:    153, 194, 77;  /* rgb de #99C24D */
+
+  /* ── 3. ASIGNACIÓN SEMÁNTICA GLOBAL ────────────────────────── */
+  --color-primary:        var(--palette-aqua);       /* Cian Aqua vibrante para resaltar */
+  --color-primary-dark:   var(--palette-ocean);      /* Azul petróleo para contrastes */
+  --color-primary-light:  #7fe2f5;
+  --color-secondary:      var(--palette-aqua);
+  --color-accent:         var(--palette-amber);
+  --color-success:        var(--palette-lime);
+  --color-mist:           var(--palette-mist);
+
+  /* Gradientes de marca */
+  --color-gradient:       linear-gradient(135deg, var(--palette-ocean) 0%, var(--palette-aqua) 100%);
+  --color-gradient-r:     linear-gradient(135deg, var(--palette-aqua) 0%, var(--palette-ocean) 100%);
+  --color-gradient-warm:  linear-gradient(135deg, var(--palette-amber) 0%, #ffaa33 100%);
+
+  /* ── 4. SUPERFICIES Y FONDOS (Basados en 006E90 y 004f68) ─── */
+  --color-bg-primary:     var(--palette-ocean-night); /* #011b24: Océano noche profundo */
+  --color-bg-secondary:   var(--palette-ocean-card);  /* #032633: Sección secundaria / Cards */
+  --color-bg-tertiary:    var(--palette-ocean-deep);  /* #053445: Paneles elevados */
+
+  /* Superficies de Tarjetas y Bordes (Glassmorphism Marino) */
+  --color-surface:        rgba(3, 38, 51, 0.72);
+  --color-surface-hover:  rgba(65, 187, 217, 0.08);
+  --color-border:         rgba(173, 202, 214, 0.14);  /* Borde suave en tono Mist */
+  --color-border-accent:  rgba(65, 187, 217, 0.35);  /* Resplandor Cian */
+  --color-border-mist:    rgba(173, 202, 214, 0.25);
+
+  /* Tipografía de Alta Legibilidad sobre Fondos Oscuros */
+  --color-text-primary:   #f0f9fc;   /* Blanco hielo con tinte cian limpio */
+  --color-text-secondary: var(--palette-mist); /* #ADCAD6: El color Niebla como texto secundario */
+  --color-text-muted:     #6b92a4;   /* Pizarra marina apagada */
+
+  /* Sombras y Resplandores */
+  --shadow-glow-primary:  0 0 36px rgba(0, 110, 144, 0.35);
+  --shadow-glow-cyan:     0 0 36px rgba(65, 187, 217, 0.30);
+  --shadow-card:          0 4px 20px rgba(0, 10, 16, 0.35);
+  --shadow-card-hover:    0 12px 36px rgba(0, 10, 16, 0.55), 0 0 24px rgba(65, 187, 217, 0.20);
+  --shadow-nav:           0 4px 24px rgba(0, 10, 16, 0.60);
+
+  /* ── 5. TOKENS DE ALTERNANCIA (SECCIONES CLARAS & OSCURAS) ─── */
+  --color-bg-light-section:        #f0f6f9; /* Porcelana Glaciar basada en Mist #ADCAD6 */
+  --color-bg-light-card:           rgba(255, 255, 255, 0.95);
+  --color-text-light-title:        #081d28; /* Azul noche profundo para contraste AAA */
+  --color-text-light-body:         #233f4e; /* Texto descriptivo claro y legible */
+  --color-text-light-muted:        #577587; /* Texto secundario en sección clara */
+  --color-border-light-section:    rgba(0, 110, 144, 0.15);
+  --color-border-light-card:       rgba(0, 110, 144, 0.12);
+  --shadow-light-card:             0 4px 20px rgba(0, 50, 75, 0.08);
+  --shadow-light-card-hover:       0 10px 30px rgba(0, 50, 75, 0.14), 0 0 16px rgba(65, 187, 217, 0.20);
+
+  /* Spacing */
+  --sp-1: 0.25rem;  --sp-2: 0.5rem;  --sp-3: 0.75rem;
+  --sp-4: 1rem;     --sp-5: 1.25rem; --sp-6: 1.5rem;
+  --sp-8: 2rem;     --sp-10: 2.5rem; --sp-12: 3rem;
+  --sp-16: 4rem;    --sp-20: 5rem;   --sp-24: 6rem;
+
+  /* Border Radius */
+  --radius-sm:   0.375rem;
+  --radius-md:   0.75rem;
+  --radius-lg:   1.25rem;
+  --radius-xl:   2rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --ease-fast:   0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-normal: 0.3s  cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-slow:   0.5s  cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Navbar */
+  --navbar-height: 72px;
+}
+
+/* ── RESET ───────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html  { scroll-behavior: smooth; font-size: 16px; }
+
+body  {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ───────────────────────────────────────────── */
+::-webkit-scrollbar        { width: 5px; }
+::-webkit-scrollbar-track  { background: var(--color-bg-secondary); }
+::-webkit-scrollbar-thumb  { background: var(--color-primary); border-radius: var(--radius-full); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-primary-dark); }
+
+/* ── TIPOGRAFÍA BASE ─────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--color-text-primary);
+}
+a      { color: inherit; text-decoration: none; }
+img    { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+
+/* ── LAYOUT ──────────────────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--sp-8);
+  @media (max-width: 640px) { padding-inline: var(--sp-4); }
+}
+
+.section {
+  padding-block: var(--sp-24);
+  @media (max-width: 768px) { padding-block: var(--sp-16); }
+
+  &--light {
+    background-color: var(--color-bg-light-section);
+    color: var(--color-text-light-body);
+    border-top: 1px solid var(--color-border-light-section);
+    border-bottom: 1px solid var(--color-border-light-section);
+
+    .section-label {
+      color: var(--palette-ocean);
+    }
+
+    .section-title {
+      color: var(--color-text-light-title);
+    }
+
+    .section-subtitle {
+      color: var(--color-text-light-body);
+    }
+
+    .text-secondary {
+      color: var(--color-text-light-body);
+    }
+
+    .text-muted {
+      color: var(--color-text-light-muted);
+    }
+
+    .glass {
+      background: var(--color-bg-light-card);
+      border: 1px solid var(--color-border-light-card);
+      box-shadow: var(--shadow-light-card);
+    }
+
+    .card--default {
+      background: var(--color-bg-light-card);
+      border-color: var(--color-border-light-card);
+      box-shadow: var(--shadow-light-card);
+
+      &:hover {
+        border-color: rgba(0, 110, 144, 0.35);
+        box-shadow: var(--shadow-light-card-hover);
+      }
+    }
+
+    .nda-notice {
+      background: rgba(255, 255, 255, 0.88);
+      border-color: rgba(0, 110, 144, 0.20);
+      box-shadow: 0 4px 18px rgba(0, 50, 75, 0.05);
+
+      &__text {
+        color: var(--color-text-light-body);
+        strong { color: var(--color-text-light-title); }
+      }
+
+      &__icon-wrap {
+        color: var(--palette-ocean);
+      }
+    }
+  }
+
+  &--dark {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+
+    .section-title {
+      color: var(--color-text-primary);
+    }
+
+    .section-subtitle {
+      color: var(--color-text-secondary);
+    }
+  }
+}
+
+/* ── GRADIENT TEXT ───────────────────────────────────────── */
+.gradient-text {
+  background: var(--color-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-secondary { color: var(--color-text-secondary); }
+.text-muted     { color: var(--color-text-muted); }
+
+/* ── GLASS (light-mode) ──────────────────────────────────── */
+.glass {
+  background: var(--color-surface);
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1px solid var(--color-border);
+}
+
+.glass--accent {
+  background: rgba(var(--color-primary-rgb), 0.04);
+  border: 1px solid var(--color-border-accent);
+}
+
+/* ── SECTION TITLES ──────────────────────────────────────── */
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  margin-bottom: var(--sp-3);
+}
+
+.section-title {
+  font-size: clamp(1.875rem, 4vw, 2.75rem);
+  margin-bottom: var(--sp-4);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ── BADGE ───────────────────────────────────────────────── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  padding: var(--sp-1) var(--sp-3);
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(var(--color-primary-rgb), 0.08);
+  border: 1px solid rgba(var(--color-primary-rgb), 0.22);
+  color: var(--color-primary);
+
+  &::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--color-success);
+    box-shadow: 0 0 8px var(--color-success);
+    animation: pulse 2s ease-in-out infinite;
+  }
+}
+
+/* ── ANIMACIONES ─────────────────────────────────────────── */
+@keyframes fadeInUp   { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeIn     { from { opacity: 0; }                               to { opacity: 1; } }
+@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-24px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeInRight{ from { opacity: 0; transform: translateX(24px); }  to { opacity: 1; transform: translateX(0); } }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.85); }
+}
+
+@keyframes spin-slow { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+/* ── ANIMATION CLASSES ───────────────────────────────────── */
+.anim-fade-up    { animation: fadeInUp    0.65s var(--ease-normal) both; }
+.anim-fade-in    { animation: fadeIn      0.5s  var(--ease-normal) both; }
+.anim-fade-left  { animation: fadeInLeft  0.65s var(--ease-normal) both; }
+.anim-fade-right { animation: fadeInRight 0.65s var(--ease-normal) both; }
+.anim-float      { animation: float       7s ease-in-out infinite; }
+
+.anim-delay-1 { animation-delay: 0.1s;  }
+.anim-delay-2 { animation-delay: 0.2s;  }
+.anim-delay-3 { animation-delay: 0.35s; }
+.anim-delay-4 { animation-delay: 0.5s;  }
+.anim-delay-5 { animation-delay: 0.65s; }
+.anim-delay-6 { animation-delay: 0.8s;  }
+
+/* ── NDA / CONFIDENTIALITY CALLOUT ───────────────────────── */
+.nda-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-3);
+  padding: var(--sp-4) var(--sp-5);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(var(--color-mist-rgb), 0.35);
+  background: rgba(12, 27, 34, 0.70);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  margin-bottom: var(--sp-8);
+
+  &__icon-wrap {
+    color: var(--color-secondary);
+    flex-shrink: 0;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-size: 0.835rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 0;
+
+    strong {
+      color: var(--color-text-primary);
+      font-weight: 600;
+    }
+  }
+}
+
+/* ── SELECTION + FOCUS ───────────────────────────────────── */
+::selection        { background: rgba(var(--color-primary-rgb), 0.22); color: var(--color-text-primary); }
+:focus-visible     { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }

@@ -1,0 +1,51 @@
+.card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+
+  // ── Padding sizes
+  &--pad-none { padding: 0; }
+  &--pad-sm   { padding: var(--sp-4); }
+  &--pad-md   { padding: var(--sp-6); }
+  &--pad-lg   { padding: var(--sp-8); }
+
+  // ── Variants
+  &--default {
+    background: var(--card-bg, var(--color-bg-tertiary));
+    border: 1px solid var(--card-border, var(--color-border));
+    box-shadow: var(--card-shadow, var(--shadow-card));
+  }
+
+  &--glass {
+    background: var(--card-bg, var(--color-surface));
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--card-border, var(--color-border));
+    box-shadow: var(--card-shadow, var(--shadow-card));
+  }
+
+  &--accent {
+    background: var(--card-bg, rgba(139, 92, 246, 0.07));
+    border: 1px solid var(--card-border, var(--color-border-accent));
+    box-shadow: var(--card-shadow, var(--shadow-glow-primary));
+  }
+
+  &--flat {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  // ── Hover state
+  &--hoverable {
+    transition:
+      transform var(--ease-normal),
+      box-shadow var(--ease-normal),
+      border-color var(--ease-normal);
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--card-hover-shadow, var(--shadow-card-hover));
+      border-color: var(--card-hover-border, var(--color-border-accent));
+    }
+  }
+}
