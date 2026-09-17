@@ -72,9 +72,9 @@ const PROJECTS_DATA: Project[] = [
       'validación de facturas, acumulación de puntos y consulta de beneficios enfocados al ' +
       'sector veterinario. El sistema soporta flujos complejos de validación documental y ' +
       'maneja catálogos dinámicos de premios para diferentes segmentos de clientes.',
-    role: 'Frontend Sr. & Coordinación — Planeación arquitectónica y desarrollo del frontend, ' +
-      'garantizando la integración continua con los servicios web del backend.',
-    technologies: ['React.js', 'Next.js', 'JavaScript', 'HTML5', 'CSS3', 'REST APIs'],
+    role: 'Fullstack Developer — Planeación arquitectónica y desarrollo del frontend y backend, ' +
+      'garantizando la integración continua de servicios, endpoints y bases de datos.',
+    technologies: ['React.js', 'Next.js', 'JavaScript', 'HTML5', 'CSS3', 'REST APIs', 'SQL Server', 'PHP', 'Laravel'],
     imageUrl: 'assets/projects/maka-vet/makavet-1.png',
     images: [
       'assets/projects/maka-vet/makavet-1.png',
@@ -84,7 +84,7 @@ const PROJECTS_DATA: Project[] = [
     ],
     projectUrl: 'https://recompensas.somosmaka.com/',
     featured: true,
-    year: 2025,
+    year: 2026,
     category: 'web',
     status: 'active',
     highlights: [
@@ -109,9 +109,9 @@ const PROJECTS_DATA: Project[] = [
       'objetivos de ventas, módulos administrativos para conciliación de facturas y un catálogo ' +
       'dinámico para la redención de premios. El sistema cuenta con dashboards de seguimiento ' +
       'de metas y herramientas de administración para el equipo interno.',
-    role: 'Frontend Sr. & Coordinación — Liderazgo en el desarrollo de la interfaz de usuario, ' +
-      'estructuración de flujos de navegación y coordinación con el equipo de backend.',
-    technologies: ['React.js', 'Next.js', 'JavaScript (ES6+)', 'Material UI', 'CSS Modules', 'REST APIs'],
+    role: 'Fullstack Developer — Planeación arquitectónica y desarrollo del frontend y backend, ' +
+      'garantizando la integración de servicios y endpoints.',
+    technologies: ['React.js', 'Next.js', 'JavaScript (ES6+)', 'Material UI', 'CSS Modules', 'REST APIs', '.NET', 'SQL Server'],
     imageUrl: 'assets/projects/maka-recompensas/makarecompensas-1.png',
     images: [
       'assets/projects/maka-recompensas/makarecompensas-1.png',
@@ -121,7 +121,7 @@ const PROJECTS_DATA: Project[] = [
     ],
     projectUrl: 'https://makarecompensas.proanpetfood.com/',
     featured: true,
-    year: 2025,
+    year: 2026,
     category: 'web',
     status: 'active',
     highlights: [
@@ -361,7 +361,7 @@ const PROJECTS_DATA: Project[] = [
       'resiliencia ante cargas masivas concurrentes en horarios pico.',
     role: 'Integration & Backend Developer (Trinum Solutions) — Arquitectura de servicios backend, diseño ' +
       'de contratos de API RESTful y seguridad transaccional corporativa.',
-    technologies: ['.NET Framework', 'C#', 'REST APIs', 'Web Services', 'SQL Server', 'Seguridad Transaccional', 'Cinemex'],
+    technologies: ['.NET', 'C#', 'PHP', 'Laravel', 'REST APIs', 'Web Services', 'SQL Server', 'Seguridad Transaccional', 'Cinemex'],
     imageUrl: '',
     images: [],
     featured: false,
