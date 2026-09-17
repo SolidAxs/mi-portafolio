@@ -157,6 +157,24 @@ import { Component, Input, computed } from '@angular/core';
             <path d="M12.1 22c3.1 0 5.1-.7 5.1-2.8V18h-5.3v-.8h7.5c2.1 0 2.6-1.9 2.6-4.1 0-2.2-1.4-3.7-3.5-3.7h-1.4v1.8c0 1.8-1.4 3.2-3.2 3.2H8.6v2.5c0 2.1 2.4 5.1 5.5 5.1zm1.8-1.5c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z" fill="#FFD43B"/>
           </svg>
         }
+        @case ('php') {
+          <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#777BB4"/>
+            <path d="M4.5 8h3c1.3 0 2.2.6 2.2 1.6 0 1-.9 1.6-2.2 1.6H6V16H4.5V8zm1.5 1.2v2h1.5c.5 0 .9-.2.9-.6s-.4-.6-.9-.6H6zm4.5-1.2H12v3h2V8h1.5v8H14v-3.6h-2V16h-1.5V8zm6 0h3c1.3 0 2.2.6 2.2 1.6 0 1-.9 1.6-2.2 1.6H18V16h-1.5V8zm1.5 1.2v2h1.5c.5 0 .9-.2.9-.6s-.4-.6-.9-.6H18z" fill="#FFFFFF"/>
+          </svg>
+        }
+        @case ('laravel') {
+          <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#FF2D20"/>
+            <path d="M12 3.5l7 4.1v8.8l-7 4.1-7-4.1V7.6l7-4.1zm0 2.3L7.5 8.4l4.5 2.6 4.5-2.6L12 5.8zM6.5 9.8v5.8l4.5 2.6V12.4L6.5 9.8zm11 0l-4.5 2.6v5.8l4.5-2.6V9.8z" fill="#FFFFFF"/>
+          </svg>
+        }
+        @case ('symfony') {
+          <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#1A1A1A"/>
+            <path d="M15 7c-1.5-.7-3.5-.6-4.5.3-1.6 1.3-1.8 3.5-.6 5 .9 1.1 2.4 1.7 3.6 2.4 1.2.7 1.7 1.5 1.3 2.5-.5 1.2-2 1.8-3.4 1.4-1.3-.4-2.1-1.2-2.5-2l-1.6 1.2c.8 1.4 2.2 2.4 4 2.6 2.6.3 5-.9 5.7-3.3.7-2.4-.4-4.5-2.7-5.7-1.2-.6-2.3-1.2-3-1.7-.6-.5-.5-1.4.1-1.8.8-.5 1.9-.4 2.8.1L15 7z" fill="#FFFFFF"/>
+          </svg>
+        }
         @case ('fastapi') {
           <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
             <circle cx="12" cy="12" r="11" fill="#009688"/>
@@ -253,6 +271,37 @@ import { Component, Input, computed } from '@angular/core';
           <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
             <path d="M5.5 19h13l-4-7.5-3.5 4.5-2.5-3.5L5.5 19z" fill="#0078D4"/>
             <path d="M12.5 3.5L5.5 16h3.5l4.5-8 4.5 8h3.5L12.5 3.5z" fill="#50E6FF"/>
+          </svg>
+        }
+        @case ('aws')
+        @case ('aws (ec2, cloudwatch)')
+        @case ('aws ec2')
+        @case ('aws cloudwatch')
+        @case ('ec2')
+        @case ('cloudwatch') {
+          <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#232F3E"/>
+            <path d="M6 10.5L7.5 6h1.3L10.3 10.5H9.1l-.3-1H7.5l-.3 1H6zm1.8-2h1.1L8.4 7.2 7.8 8.5zm3.7 2L10.3 6h1.3l.6 2.7.7-2.7h1.1l.6 2.7.6-2.7h1.3l-1.2 4.5h-1.3l-.6-2.6-.6 2.6h-1.3zm4.8 0c-.8 0-1.4-.4-1.4-1h1.2c0 .2.2.3.4.3.3 0 .4-.2.4-.4 0-.3-.3-.4-.7-.6-.6-.2-.9-.6-.9-1.1 0-.6.5-1.1 1.3-1.1s1.3.4 1.3 1h-1.2c0-.2-.1-.3-.3-.3s-.4.1-.4.3c0 .2.2.3.6.5.6.3 1 .6 1 1.2 0 .7-.6 1.2-1.4 1.2z" fill="#FFFFFF"/>
+            <path d="M5.5 13.5c3 2 8 2 11.5 0" stroke="#FF9900" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M15.5 13l2.5 1-1.5 1.5" stroke="#FF9900" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+        }
+        @case ('rabbitmq') {
+          <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#FF6600"/>
+            <path d="M8.5 4.5c.8 0 1.5 1.2 1.5 2.5 0 1.2-.4 2-1 2.5 1.5.2 2.5 1.5 2.5 3 0 .8-.3 1.5-.8 2 1-.2 1.8-.8 2.3-1.5.5-1 1.2-1.5 2-1.5 1.2 0 2 1.2 1.5 2.5-.5 1.2-1.8 2-3 2.5H8c-2 0-3.5-1.5-3.5-3.5 0-1.5 1-2.8 2.3-3.3C6.3 8.7 6 7.6 6 6.5 6 5.4 7.1 4.5 8.5 4.5z" fill="#FFFFFF"/>
+            <circle cx="7.5" cy="7" r="0.8" fill="#FF6600"/>
+          </svg>
+        }
+        @case ('aws sqs')
+        @case ('sqs') {
+          <svg [attr.width]="size" [attr.height]="size" viewBox="0 0 24 24" fill="none">
+            <rect width="24" height="24" rx="5" fill="#D02B6D"/>
+            <rect x="4" y="6" width="16" height="3" rx="1" fill="#FFFFFF" fill-opacity="0.3"/>
+            <rect x="4" y="10.5" width="16" height="3" rx="1" fill="#FFFFFF" fill-opacity="0.3"/>
+            <rect x="4" y="15" width="16" height="3" rx="1" fill="#FFFFFF" fill-opacity="0.3"/>
+            <path d="M7 7.5h6M7 12h6M7 16.5h6" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M15 12l2.5-2.5M17.5 9.5H14.5M17.5 9.5v3" stroke="#FF9900" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         }
         @case ('az-900') {

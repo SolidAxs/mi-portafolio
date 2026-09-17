@@ -46,11 +46,11 @@ export class HomeComponent implements OnInit {
   readonly searchQuery = signal<string>('');
 
   readonly categories: { id: TechCategory; label: string; count: number }[] = [
-    { id: 'all',          label: 'Todas',                     count: 54 },
+    { id: 'all',          label: 'Todas',                     count: 60 },
     { id: 'frontend',     label: 'Frontend & Mobile',         count: 16 },
-    { id: 'backend',      label: 'Backend & .NET',            count: 9  },
+    { id: 'backend',      label: 'Backend & .NET',            count: 12 },
     { id: 'data',         label: 'Bases de Datos & Data',     count: 9  },
-    { id: 'cloud',        label: 'Cloud & DevOps',            count: 6  },
+    { id: 'cloud',        label: 'Cloud & DevOps',            count: 9  },
     { id: 'ai',           label: 'IA & Herramientas',         count: 8  },
     { id: 'architecture', label: 'Arquitectura & Principios', count: 6  },
   ];
@@ -74,12 +74,15 @@ export class HomeComponent implements OnInit {
     { name: 'Xamarin Forms',  category: 'frontend', categoryLabel: 'Mobile' },
     { name: 'Blazor',         category: 'frontend', categoryLabel: 'Frontend .NET' },
 
-    // ── Backend & .NET (9)
+    // ── Backend & .NET (12)
     { name: '.NET',             category: 'backend', categoryLabel: 'Ecosistema' },
     { name: '.NET Framework',   category: 'backend', categoryLabel: 'Framework' },
     { name: 'ASP.NET Core',     category: 'backend', categoryLabel: 'Web API' },
     { name: 'Entity Framework', category: 'backend', categoryLabel: 'ORM' },
     { name: 'C#',               category: 'backend', categoryLabel: 'Lenguaje' },
+    { name: 'PHP',              category: 'backend', categoryLabel: 'Lenguaje' },
+    { name: 'Laravel',          category: 'backend', categoryLabel: 'Framework PHP' },
+    { name: 'Symfony',          category: 'backend', categoryLabel: 'Framework PHP' },
     { name: 'Node.js',          category: 'backend', categoryLabel: 'Runtime' },
     { name: 'Python',           category: 'backend', categoryLabel: 'Lenguaje' },
     { name: 'FastAPI',          category: 'backend', categoryLabel: 'Web API' },
@@ -96,13 +99,16 @@ export class HomeComponent implements OnInit {
     { name: 'Pandas',        category: 'data', categoryLabel: 'Data Analysis' },
     { name: 'NumPy',         category: 'data', categoryLabel: 'Scientific Computing' },
 
-    // ── Cloud, DevOps & APIs (6)
-    { name: 'Azure',          category: 'cloud', categoryLabel: 'Cloud Platform' },
-    { name: 'AZ-900',         category: 'cloud', categoryLabel: 'Certificación Microsoft' },
-    { name: 'Docker',         category: 'cloud', categoryLabel: 'Contenedores' },
-    { name: 'Docker Compose', category: 'cloud', categoryLabel: 'Orquestación' },
-    { name: 'GraphQL',        category: 'cloud', categoryLabel: 'Query Language' },
-    { name: 'REST APIs',      category: 'cloud', categoryLabel: 'Arquitectura API' },
+    // ── Cloud, DevOps & APIs (9)
+    { name: 'Azure',                  category: 'cloud', categoryLabel: 'Cloud Platform' },
+    { name: 'AZ-900',                 category: 'cloud', categoryLabel: 'Certificación Microsoft' },
+    { name: 'AWS (EC2, CloudWatch)',  category: 'cloud', categoryLabel: 'Cloud Platform' },
+    { name: 'Docker',                 category: 'cloud', categoryLabel: 'Contenedores' },
+    { name: 'Docker Compose',         category: 'cloud', categoryLabel: 'Orquestación' },
+    { name: 'RabbitMQ',               category: 'cloud', categoryLabel: 'Message Broker' },
+    { name: 'AWS SQS',                category: 'cloud', categoryLabel: 'Message Queue' },
+    { name: 'GraphQL',                category: 'cloud', categoryLabel: 'Query Language' },
+    { name: 'REST APIs',              category: 'cloud', categoryLabel: 'Arquitectura API' },
 
     // ── IA & Herramientas (8)
     { name: 'Codex',       category: 'ai', categoryLabel: 'AI Coding' },
@@ -121,6 +127,9 @@ export class HomeComponent implements OnInit {
     { name: 'Clean Architecture',            category: 'architecture', categoryLabel: 'Patrón de Diseño' },
     { name: 'Test-Driven Development (TDD)', category: 'architecture', categoryLabel: 'Metodología QA' },
     { name: 'Domain-Driven Design (DDD)',    category: 'architecture', categoryLabel: 'Modelado Core' },
+  
+    
+  
   ];
 
   /** Lista filtrada por categoría y búsqueda */
@@ -141,7 +150,7 @@ export class HomeComponent implements OnInit {
 
   onDownloadCv(): void {
     this.analytics.trackEvent('download_cv', {
-      file_name: 'AlexisMtzCV082026-Backend.pdf',
+      file_name: 'CV_Alexis_Martinez_Juarez_092026.pdf',
     });
   }
 
