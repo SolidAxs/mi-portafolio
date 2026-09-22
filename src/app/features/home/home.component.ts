@@ -150,7 +150,7 @@ export class HomeComponent implements OnInit {
 
   onDownloadCv(): void {
     this.analytics.trackEvent('download_cv', {
-      file_name: 'CV_Alexis_Martinez_Juarez_092026.pdf',
+      file_name: 'CV_Alexis_Martinez_Juarez_Backend.pdf',
     });
   }
 

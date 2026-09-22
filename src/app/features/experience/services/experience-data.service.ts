@@ -66,16 +66,16 @@ const EXPERIENCES_DATA: ExperienceItem[] = [
     ],
   },
 
-  // ── 2. FourITech ─────────────────────────────────────────────────────────────
+  // ── 2. Maka & SmartUp (Consultor Externo) ─────────────────────────────────
   {
-    id: 'fouritech-sr-fullstack',
-    role: 'Senior Full Stack',
-    company: 'FourITech',
-    employmentType: 'Jornada completa',
-    period: 'feb. 2026 - presente',
-    startDate: '2026-02',
-    endDate: 'presente',
-    duration: 'En curso',
+    id: 'consultor-maka-smartup',
+    role: 'Senior Full Stack Developer',
+    company: 'Maka / SmartUp',
+    employmentType: 'Consultor externo',
+    period: 'feb. 2025 - mar. 2026',
+    startDate: '2025-02',
+    endDate: '2026-03',
+    duration: '1 año 1 mes',
     location: 'En remoto',
     highlights: [
       'Arquitectura y desarrollo de APIs y servicios de integración (PHP/.NET) para los programas de lealtad Maka Vet y Maka Recompensas.',
