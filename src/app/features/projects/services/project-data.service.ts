@@ -107,11 +107,11 @@ const PROJECTS_DATA: Project[] = [
       'Portal web integral del programa de lealtad "MAKA Rewards+", orientado a distribuidores, ' +
       'mayoristas y minoristas. Incluye flujos complejos para la acumulación por cumplimientos de ' +
       'objetivos de ventas, módulos administrativos para conciliación de facturas y un catálogo ' +
-      'dinámico para la redención de premios. Integra microservicios backend desarrollados con Java 17, ' +
+      'dinámico para la redención de premios. Integra microservicios backend desarrollados con Java, ' +
       'Spring Boot, Spring Data JPA y Spring Security para el control de accesos y la gestión segura de transacciones.',
     role: 'Fullstack Developer — Planeación arquitectónica y desarrollo de componentes frontend y microservicios backend con Java (Spring Boot) y .NET, ' +
       'garantizando la integración de servicios, endpoints y bases de datos.',
-    technologies: ['React.js', 'Next.js', 'Java 17', 'Spring Boot', 'Spring Data', 'Spring Security', '.NET', 'JavaScript (ES6+)', 'Material UI', 'REST APIs', 'SQL Server'],
+    technologies: ['React.js', 'Next.js', 'Java', 'Spring Boot', 'Spring Data', 'Spring Security', '.NET', 'JavaScript (ES6+)', 'Material UI', 'REST APIs', 'SQL Server'],
     imageUrl: 'assets/projects/maka-recompensas/makarecompensas-1.png',
     images: [
       'assets/projects/maka-recompensas/makarecompensas-1.png',
@@ -126,7 +126,7 @@ const PROJECTS_DATA: Project[] = [
     status: 'active',
     highlights: [
       'Flujos de acumulación por cumplimiento de metas de ventas',
-      'Microservicios backend desarrollados con Java 17 y Spring Boot',
+      'Microservicios backend desarrollados con Java y Spring Boot',
       'Módulos administrativos de conciliación de facturas',
       'Catálogo dinámico para redención de premios',
       'Dashboard de seguimiento de objetivos por distribuidor',
@@ -145,12 +145,12 @@ const PROJECTS_DATA: Project[] = [
       'Plataforma web orientada a la administración y seguimiento de programas de lealtad e ' +
       'incentivos sustentables de la Caja Popular Mexicana. Permite a los usuarios registrar ' +
       'interacciones, consultar saldos acumulados y canjear beneficios. Desarrollada con una ' +
-      'arquitectura de microservicios en Java 17 con Spring Boot, Spring Security (autenticación OAuth2/JWT) ' +
+      'arquitectura de microservicios en Java con Spring Boot, Spring Security (autenticación OAuth2/JWT) ' +
       'y Spring Data JPA, junto con servicios .NET Core, gestionando transacciones de puntos en tiempo real, ' +
       'reportes de acumulación y paneles de administración para la gestión masiva de usuarios.',
     role: 'Desarrollador Sr. Fullstack — Diseño e implementación de la arquitectura web y microservicios con Java (Spring Boot) ' +
       'y .NET Core, optimización de base de datos y construcción de servicios para gestión de usuarios y transacciones.',
-    technologies: ['Java 17', 'Spring Boot', 'Spring Data', 'Spring Security', '.NET Framework', '.NET Core', 'C#', 'SQL Server', 'REST APIs', 'JavaScript'],
+    technologies: ['Java', 'Spring Boot', 'Spring Data', 'Spring Security', '.NET Framework', '.NET Core', 'C#', 'SQL Server', 'REST APIs', 'JavaScript'],
     imageUrl: 'assets/projects/puntos-verdes/puntosverdes1.jpg',
     images: [
       'assets/projects/puntos-verdes/puntosverdes1.jpg',
@@ -165,7 +165,7 @@ const PROJECTS_DATA: Project[] = [
     category: 'fullstack',
     status: 'active',
     highlights: [
-      'Arquitectura de microservicios con Java 17, Spring Boot y Spring Security',
+      'Arquitectura de microservicios con Java, Spring Boot y Spring Security',
       'Gestión de transacciones de puntos en tiempo real con Spring Data',
       'Módulos de administración masiva de usuarios',
       'Optimización de queries en SQL Server',
@@ -259,11 +259,11 @@ const PROJECTS_DATA: Project[] = [
       'Programa de lealtad desarrollado para la plataforma TeleVía, enfocado en recompensar a ' +
       'los usuarios frecuentes mediante la acumulación de puntos por recargas y uso de tag, ' +
       'permitiendo la redención en un catálogo exclusivo de beneficios. La plataforma procesaba ' +
-      'transacciones de telepeaje en tiempo real mediante microservicios desarrollados en Java 8 y Spring Boot, ' +
+      'transacciones de telepeaje en tiempo real mediante microservicios desarrollados en Java y Spring Boot, ' +
       'gestionaba la acumulación automática con Spring Data JPA y aseguraba la API de integración con Spring Security.',
     role: 'Desarrollador Fullstack — Creación y mantenimiento de portales de lealtad, microservicios backend en Java (Spring Boot) ' +
       'y .NET Core, consumo de servicios transaccionales de telepeaje y procesamiento de datos.',
-    technologies: ['Java 8 / 17', 'Spring Boot', 'Spring Data', 'Spring Security', 'React.js', '.NET Core', 'Python', 'C#', 'JavaScript', 'SQL Server', 'REST APIs'],
+    technologies: ['Java', 'Spring Boot', 'Spring Data', 'Spring Security', 'React.js', '.NET Core', 'Python', 'C#', 'JavaScript', 'SQL Server', 'REST APIs'],
     imageUrl: 'assets/projects/televia-rewards/televia-rewards-1.png',
     images: [
       'assets/projects/televia-rewards/televia-rewards-1.png',
