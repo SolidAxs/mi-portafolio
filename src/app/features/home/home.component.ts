@@ -46,9 +46,9 @@ export class HomeComponent implements OnInit {
   readonly searchQuery = signal<string>('');
 
   readonly categories: { id: TechCategory; label: string; count: number }[] = [
-    { id: 'all',          label: 'Todas',                     count: 60 },
+    { id: 'all',          label: 'Todas',                     count: 64 },
     { id: 'frontend',     label: 'Frontend & Mobile',         count: 16 },
-    { id: 'backend',      label: 'Backend & .NET',            count: 12 },
+    { id: 'backend',      label: 'Backend, Java & .NET',      count: 16 },
     { id: 'data',         label: 'Bases de Datos & Data',     count: 9  },
     { id: 'cloud',        label: 'Cloud & DevOps',            count: 9  },
     { id: 'ai',           label: 'IA & Herramientas',         count: 8  },
@@ -74,7 +74,11 @@ export class HomeComponent implements OnInit {
     { name: 'Xamarin Forms',  category: 'frontend', categoryLabel: 'Mobile' },
     { name: 'Blazor',         category: 'frontend', categoryLabel: 'Frontend .NET' },
 
-    // ── Backend & .NET (12)
+    // ── Backend, Java & .NET (16)
+    { name: 'Java 17',          category: 'backend', categoryLabel: 'Lenguaje' },
+    { name: 'Spring Boot',      category: 'backend', categoryLabel: 'Framework Backend' },
+    { name: 'Spring Data',      category: 'backend', categoryLabel: 'ORM / Data Access' },
+    { name: 'Spring Security',  category: 'backend', categoryLabel: 'Seguridad & Auth' },
     { name: '.NET',             category: 'backend', categoryLabel: 'Ecosistema' },
     { name: '.NET Framework',   category: 'backend', categoryLabel: 'Framework' },
     { name: 'ASP.NET Core',     category: 'backend', categoryLabel: 'Web API' },
